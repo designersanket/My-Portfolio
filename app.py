@@ -1,30 +1,37 @@
-from flask import Flask, render_template, request, redirect,flash
-from flask_mysqldb import MySQL
+from flask import Flask, render_template, request, redirect, flash
+import pymysql
 
 app = Flask(__name__)
-app.secret_key="dnkvjhrbhvjbdlkjvdvnhgflkjbdvkdjvlknjvdsnkvrugryteincdkjsroihgiurvnrvorhgrevjbhbrvkervnmvamsdvkrbvj"
+app.secret_key = "dnkvjhrbhvjbdlkjvdvnhgflkjbdvkdjvlknjvdsnkvrugryteincdkjsroihgiurvnrvorhgrevjbhbrvkervnmvamsdvkrbvj"
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Sanket8787'
-app.config['MYSQL_DB'] = 'portfolio'
-
-mysql = MySQL(app)
+# Database connection (PyMySQL)
+def get_db_connection():
+    return pymysql.connect(
+        host='localhost',
+        user='root',
+        password='Sanket8787',
+        db='portfolio',
+        cursorclass=pymysql.cursors.DictCursor
+    )
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         email = request.form['email']
         message = request.form['textarea']
-        cur = mysql.connection.cursor()
+        conn = get_db_connection()
+        cur = conn.cursor()
         cur.execute("INSERT INTO contacts (email, message) VALUES (%s, %s)", (email, message))
-        mysql.connection.commit()
+        conn.commit()
         cur.close()
-        flash('Thank You! Your message has been sent.','success')
+        conn.close()
+        flash('Thank You! Your message has been sent.', 'success')
         return redirect('/')
     return render_template('index.html')
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

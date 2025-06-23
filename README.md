@@ -1,7 +1,7 @@
-💼 Personal Portfolio Website
+# 💼 Personal Portfolio Website
 A responsive and visually engaging personal portfolio website built to showcase my projects, skills, and background in web development and design. It includes interactive UI elements, smooth animations, and a modern design that reflects my personality and professional journey.
 
-✨ Features
+# ✨ Features
 🔹 Home, Projects, Skills, and About sections
 
 🔹 Interactive UI with glowing hover effects
@@ -14,9 +14,9 @@ A responsive and visually engaging personal portfolio website built to showcase 
 
 🔹 Footer with social links and copyright
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 Frontend: HTML, CSS, JavaScript
 
-UI Design: Custom CSS Animations & Flexbox
+# UI Design: Custom CSS Animations & Flexbox
 
-Hosting: Vercel / GitHub Pages.
+# Hosting: Vercel / GitHub Pages.

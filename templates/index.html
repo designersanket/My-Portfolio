@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket | Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img class="image-gradient" src="/static/gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+    <div class="container">
+        <header>
+            <h1 class="logo">Sanket</h1>
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#skill">SKILL</a>
+                <a href="#project">PROJECT</a>
+                <a href="#aiwork">AI WORK</a>
+                <a href="#uigallery">UI GALLERY</a>
+            </nav>
+            <a href="{{ url_for('about') }}" class="btn-about">About</a>
+
+        </header>
+        <main>
+            <div class="content">
+                <div class="tag-box">
+                    <div class="tag">Hello I'm </div>
+                </div>
+                <div>
+                  <h1 class="intro-heading">
+                    <span class="name-highlight">Sanket Jagadale</span> 
+                    a passionate developer & designer
+                  </h1>
+                    <p class="tagline">
+                      I craft intelligent solutions with code, creativity, and curiosity.
+                    </p>
+                    <div class="buttons">
+                        <a href="#"class="btn-resume">RESUME</a>
+                        <a href="#hireme" class="btn-hire-me"> CONTACT ME</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <spline-viewer class="robot-3d" url="https://prod.spline.design/vRX3keRAVjzy1dwn/scene.splinecode"></spline-viewer>
+    </div>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script>
+    <!-- Skill Section -->
+   <section id="skill">
+  <h1 style="text-align: center; font-size: 3rem;">Skills</h1>
+
+  
+  <div class="skill-row">
+    <div class="skill-column">
+      <div class="skill">
+        <p>HTML</p>
+        <div class="bar">
+          <div class="bar-fill html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Python</p>
+        <div class="bar">
+          <div class="bar-fill python"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-column">
+      <div class="skill">
+        <p>CSS</p>
+        <div class="bar">
+          <div class="bar-fill css"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>JAVA</p>
+        <div class="bar">
+          <div class="bar-fill java"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Project Section -->
+   <section id="project" class="section" data-aos="fade-up">
+  <h1 style="text-align: center; font-size: 3rem;">MY Work</h1>
+
+  <div class="project-container">
+    <!-- Card 1 -->
+     <a href="https://gym-pgo.vercel.app/" target="_blank" class="card-link">
+    <div class="card">
+      <img src="/static/img/gym.png" alt="HTML Project" class="project-img" />
+      <p class="heading">GYM Frontend</p>
+      <p>Static</p>
+      <p>HTML CSS</p>
+    </div>
+     </a>
+
+    <!-- Card 2 -->
+     <a href="https://recipt-generator-eta.vercel.app/" target="_blank" class="card-link">
+        <div class="card">
+            <img src="/static/img/recipt.png" alt="CSS Project" class="project-img" />
+            <p class="heading">Recipt Gen</p>
+            <p>Dynamic</p>
+            <p>HTML CSS Flask</p>
+        </div>
+     </a>
+
+    <!-- Card 3 -->
+     <a href="https://hang-game.vercel.app/" target="_blank" class="card-link">
+        <div class="card">
+        <img src="/static/img/hang-game.png" alt="Python Project" class="project-img" />
+        <p class="heading">Hang Game</p>
+        <p>Dynamic</p>
+        <p>HTML CSS Flask</p>
+        </div>
+     </a>
+
+    <!-- Card 4 -->
+     <a href="https://github.com/designersanket/Inventry_Management_System" target="_blank" class="card-link">
+        <div class="card">
+          <img src="/static/img/inventry.png" alt="Python Project" class="project-img" />
+          <p class="heading">Inventry Man</p>
+          <p>Static</p>
+          <p>Python Flask</p>
+        </div>
+     </a>
+  </div>
+</section>
+
+
+    <!--Ai Work Section-->
+        <section id="aiwork">
+            <h1 style="text-align: center; font-size: 3rem;">AI Project</h1>
+            <div class="ai-projects-container">
+              <div class="ai-card">
+                <h2>Rock-Paper-Sessior Game</h2>
+                <p>Based on cvzone You can play with AI real time camera access</p>
+                <p><strong>Tools:</strong> Python,cvzone,open cv</p>
+                <a href="https://github.com/designersanket/RockPaper-Game">View Project</a>
+              </div>
+              <div class="ai-card">
+                <h2>Coming Soon..</h2>
+                <p>Retinopathy Detection using Deep Learning</p>
+                <p><strong>Tools:</strong>Python,Tensorflow,numpy</p>
+                <a href="#">Stay Tuned</a>
+              </div>
+            </div>
+        </section>
+    <!-- Ui Gallery Section -->
+        <section id="uigallery">
+          <h1 style="text-align: center; font-size: 3rem;" col>UI Gallery</h1>
+
+              <div class="uiux-gallery">
+                <!-- Project 1 -->
+                <div class="uiux-mockup">
+                  <img src="/static/img/Pams.png" alt="PAMS UI Design" />
+                  <div class="mockup-overlay">
+                    <h3>GYM Mobile UI</h3>
+                    <p>Figma • Minimalist • Fitness App</p>
+                    <a href="https://www.figma.com/proto/x6sRP8uKAWPA6xWWFW7je6/PAMS-UI-Design?page-id=0%3A1&node-id=102-216&viewport=84%2C17%2C0.16&t=3E4s4SVFsQzEotBX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=110%3A676" target="_blank">View in Figma</a>
+                  </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="uiux-mockup">
+                  <img src="/static/img/ERP.png" alt="ERP Admin Pannel" />
+                  <div class="mockup-overlay">
+                    <h3>Receipt Generator UI</h3>
+                    <p>Figma • UI Kit • Web App</p>
+                    <a href="https://www.figma.com/proto/Wk2NEnL7HH7D18gqmv7yBQ/ERP-Design?node-id=53-1231&t=ZjHkiT0kdgWcs6ca-1" target="_blank">View in Figma</a>
+                  </div>
+                </div>
+                    <!--Project03-->
+                    <div class="uiux-mockup">
+                      <img src="/static/img/Amazing-oil.png" alt="Amazing oil UI"/>
+                      <div class="mockup-overlay">
+                        <h3>Amazing Desi Oil Mobile App</h3>
+                        <p>Figma • Userfree • Mobile App</p>
+                        <a href="https://www.figma.com/proto/zHHzeqeswAjGnHFQyIC5UA/Amazing-Desi-oils?node-id=2-21&t=FyAeO2mTSVtxbsLs-1">View in Figma</a>
+                      </div>
+                    </div>
+                  </div>
+          </section> 
+    <footer class="footer">
+  <div class="footer-container">
+    <!-- Left Side: Contact Info -->
+    <div class="footer-left">
+      <h2 class="footer-heading">Let's <span class="gradient-text">talk</span></h2>
+      <p>Feel free to contact me 24/7</p>
+      <ul class="contact-info">
+        <li>
+          <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank">
+          <img src="/static/img/linkedin.png" alt="LinkedIn" /> Sanket Jagadale
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/designersanket" target="_blank">
+          <img src="/static/img/github.png" alt="GitHub" /> Sanket-Jagadale
+          </a>
+        </li>
+        <li>
+          <a href="sanketjagadale04@gmail.com">
+          <img src="/static/img/gmail.png" alt="Email" /> sanketjagadale04@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="form-container">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <section id="hireme">
+        <form class="form" method="POST" action="/">
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input required name="email" id="email" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="textarea">Type message</label>
+            <textarea required cols="50" rows="10" id="textarea" name="textarea"></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

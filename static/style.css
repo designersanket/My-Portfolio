@@ -1,0 +1,922 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+/* Gradient and the layer blur effect*/
+.image-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+.layer-blur{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+/*CONTAINER*/
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 1;
+    position: relative;
+}
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover{
+    color: #00ffff;
+    text-decoration: none;
+}
+/*ABOUT BUTTONE*/
+.btn-about{
+    text-decoration: none;
+    background-color: #00ffff;
+    color: black;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    border: 2px solid transparent; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-about:hover{
+  text-decoration: none;
+    background-color: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 12px #00ffff, 0 0 24px #00ffff
+}
+
+
+/*main cintent*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565,#7f42a7,#6600c5,#5300a0,#757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255,255, 0.3);
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.tag-box .tag {
+    position: absolute;
+    inset: 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box.tag:hover{
+    color: #5300a0;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128,128, 0.418);
+}
+
+.discription{
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    max-width: 35rem;
+    color: gray;
+}
+.buttons{
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.btn-resume {
+    display: inline-block;
+    padding: 20px 35px;
+    border: 2px solid #00ffff;
+    background-color: transparent;
+    color: #00ffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    text-decoration: none;
+    background-color: #00ffff;
+    color: #000;
+    font-weight: 600; 
+    box-shadow: 0 0 12px #00ffff, 0 0 24px #00ffff
+}
+
+
+.btn-hire-me{
+    
+    display: inline-block;
+    padding: 20px 35px;
+    border: 2px solid #00ffff;
+    background-color: transparent;
+    color: #00ffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-hire-me:hover{
+    text-decoration: none;
+    background-color: #00ffff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 0 12px #00ffff, 0 0 24px #00ffff
+}
+
+.robot-3d{
+    position: absolute;
+    top: 0;
+    right: -20%;
+    
+}
+/*landing*/
+.intro-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.name-highlight {
+  color: #b28dff;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 0;
+}
+
+/* Skill Section */
+.skill-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 80px;
+}
+
+.skill-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill {
+  width: 500px; /* You can adjust this */
+}
+
+.bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #e81cff, #40c9ff);
+  border-radius: 10px;
+  animation: fill 2s forwards;
+}
+
+.bar-fill.html {
+  animation-name: html-fill;
+  animation-delay: 0.2s;
+}
+
+.bar-fill.css {
+  animation-name: css-fill;
+  animation-delay: 0.4s;
+}
+
+.bar-fill.python {
+  animation-name: python-fill;
+  animation-delay: 0.6s;
+}
+
+.bar-fill.java {
+  animation-name: java-fill;
+  animation-delay: 0.8s;
+}
+
+@keyframes html-fill {
+  from { width: 0; }
+  to { width: 90%; }
+}
+
+@keyframes css-fill {
+  from { width: 0; }
+  to { width: 85%; }
+}
+
+@keyframes python-fill {
+  from { width: 0; }
+  to { width: 80%; }
+}
+
+@keyframes java-fill {
+  from { width: 0; }
+  to { width: 75%; }
+}
+#skill {
+  padding-bottom: 80px;
+}
+
+#project {
+  padding-top: 80px;
+}
+#aiwork{
+  padding-bottom: 80px;
+}
+#uigallery{
+  padding-top: 80px;
+}
+#contactme{
+  padding-top: 80px;
+}
+
+/*Section no 2*/
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);;
+}
+
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+  margin: 0;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+/* img adjusting */
+.project-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;     /* Ensures image fills area nicely */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover{
+  text-decoration: none;
+}
+/*-------------Section no 2 Ai Work-----------------*/
+.ai-projects-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 90px;
+}
+.ai-card{
+  width: 320px;
+  min-height: 240px; /* adjust based on actual height of taller card */
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ai-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+.ai-card h2{
+  color: #b28dff;
+  margin-bottom: 10px;
+}
+.ai-card p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+}
+.ai-card a{
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background: #40c9ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.ai-card:hover{
+  background: transparent;
+}
+.ai-card a:hover{
+  text-decoration: none;
+    background-color: transparent;
+    color: #40c9ff;
+    border: 2px solid #40c9ff;
+    box-shadow: 0 0 12px #40c9ff, 0 0 24px #40c9ff
+}
+/*UI Gallery SEction*/
+#uigallery {
+  padding: 60px 20px;
+  
+}
+#h1{
+  margin-top: 80px;
+}
+
+.uiux-gallery {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.uiux-mockup {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.uiux-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mockup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.uiux-mockup:hover .mockup-overlay {
+  opacity: 1;
+}
+
+.mockup-overlay h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.mockup-overlay p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.mockup-overlay a {
+  background: #e81cff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.mockup-overlay a:hover {
+  background: #c700dd;
+  text-decoration: none;
+}
+
+
+/*Contact me section*/
+/* From Uiverse.io by omriluz */ 
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+  margin-top: 20px;
+  margin-left: 40rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: flex;
+  margin-bottom: 5px;
+  color: gray;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: gray;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #e81cff;
+  border-color: #e81cff;
+  color: white;
+}
+/*Flash Message*/
+.flash.success {
+  padding: 12px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*Foother*/
+.footer {
+    padding: 30px 0;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+/*============================*/
+.footer {
+  padding: 60px 40px;
+  border-top: 1px solid #fff;
+  background-color: #121212;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Contact Info (Left Side) */
+.footer-left {
+  flex: 1 1 300px;
+  padding-left: 20px;
+}
+
+.footer-heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #e81cff, #40c9ff);
+  background-clip: text;            /* ✅ Standard */
+  -webkit-background-clip: text;    /* ✅ For WebKit browsers (Chrome, Safari) */
+  color: transparent;               /* Hide original text color */
+  -webkit-text-fill-color: transparent; /* ✅ For Safari/Chrome */
+}
+
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.contact-info a{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  text-align: center;
+  gap: 15px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.contact-info img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Override margin for form placement */
+.form-container {
+  flex: 1 1 400px;
+  margin: 0; /* Remove left margin */
+}
+
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .content {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .tag-box {
+    width: 100%;
+  }
+
+  .discription {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .btn-resume,
+  .btn-hire-me {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .robot-3d {
+    display: none; /* hide the robot image on smaller screens */
+  }
+}
+
+/* Mobiles (480px and below) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .tag-box {
+    height: 2rem;
+  }
+
+  .discription {
+    font-size: 0.95rem;
+  }
+
+  .btn-resume,
+  .btn-hire-me {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+/*about section*/
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container styling */
+.abcontainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff22;
+}
+
+/* Headings */
+h2 {
+  color: #00ffff;
+  font-size: 2.2rem;
+  border-bottom: 2px solid #00ffff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #00ffff;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+/* Paragraphs and Lists */
+p, ul {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+/* Links */
+a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Highlight box */
+.highlight {
+  background: #00ffff22;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #00ffff;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px #00ffff33;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p, ul {
+    font-size: 1rem;
+  }
+}

@@ -1,243 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanket | Portfolio</title>
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanket Jagadale — MERN Stack & AI Developer. Building scalable full-stack apps with AI-powered features. Open for internships and entry-level roles.">
+  <title>Sanket Jagadale | MERN Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <img class="image-gradient" src="/static/gradient.png" alt="gradient">
-    <div class="layer-blur"></div>
-    <div class="container">
-        <header>
-            <h1 class="logo">Sanket</h1>
-            <nav>
-                <a href="#home">HOME</a>
-                <a href="#skill">SKILL</a>
-                <a href="#project">PROJECT</a>
-                <a href="#aiwork">AI WORK</a>
-                <a href="#uigallery">UI GALLERY</a>
-            </nav>
-            <a href="{{ url_for('about') }}" class="btn-about">About</a>
 
-        </header>
-        <main>
-            <div class="content">
-                <div class="tag-box">
-                    <div class="tag">Hello I'm </div>
-                </div>
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">SJ<span class="logo-dot">.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#coding">Coding</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="hero-section center-hero">
+    <div class="hero-bg-blur"></div>
+    <div class="hero-content center" data-aos="fade-up" data-aos-duration="900">
+
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to SDE Internships &amp; Full-time Roles
+      </div>
+
+      <h1 class="hero-title big">
+        BUILDING <span class="gradient-text">SCALABLE</span><br>
+        WEB EXPERIENCES
+      </h1>
+
+      <h2 class="hero-role center-text">
+        <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+      </h2>
+
+      <p class="hero-subtitle center-text">
+        I'm <strong>Sanket Jagadale</strong> — a MERN stack developer who turns requirements into
+        production-ready apps with AI-integrated features, clean APIs, and real-world impact.
+      </p>
+
+      <div class="hero-stats center-stats">
+        <div class="hero-stat"><span>5+</span><p>Projects Shipped</p></div>
+        <div class="hero-stat"><span>2+</span><p>AI Integrations</p></div>
+        <div class="hero-stat"><span>300+</span><p>LeetCode Solved</p></div>
+        <div class="hero-stat"><span>3</span><p>Figma UI Projects</p></div>
+      </div>
+
+      <div class="hero-buttons center">
+        <a href="#projects" class="btn-primary">See My Work <i class="fas fa-arrow-right"></i></a>
+        <a href="https://drive.google.com/your-resume-link" target="_blank" class="btn-secondary"><i class="fas fa-download"></i> Resume</a>
+        <a href="#contact" class="btn-ghost">Hire Me</a>
+      </div>
+
+      <div class="hero-social center-social">
+        <a href="https://github.com/designersanket" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/designersanket" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="mailto:sanketjagadale04@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about" class="section about-section">
+    <div class="section-inner">
+      <div class="section-label" data-aos="fade-right"><span>01 — Who I Am</span></div>
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+          <p>
+            I'm <strong>Sanket Jagadale</strong>, a B.Tech CS (AI) student and MERN Stack developer who loves building full-stack products that are both technically sound and visually polished.
+          </p>
+          <p>
+            My interest sits at the intersection of <strong>web development</strong>, <strong>AI integration</strong>, and <strong>competitive programming</strong>. I've worked with the Gemini API to build intelligent code-analysis tools and integrated real-world AI features into production apps.
+          </p>
+          <p>
+            I'm actively looking for <strong>SDE Internships</strong> and <strong>entry-level Software Engineer</strong> roles where I can contribute to impactful products and grow with a strong engineering team.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item"><i class="fas fa-graduation-cap"></i> B.Tech CS (AI) — 2025</div>
+            <div class="highlight-item"><i class="fas fa-map-marker-alt"></i> Maharashtra, India</div>
+            <div class="highlight-item"><i class="fas fa-certificate"></i> Intel® Unnati Industrial Training 2025</div>
+            <div class="highlight-item"><i class="fas fa-briefcase"></i> Open to: Internships & Full-time SDE roles</div>
+          </div>
+        </div>
+
+        <div class="about-card" data-aos="fade-left" data-aos-delay="200">
+          <h3>What I bring to the table</h3>
+          <ul class="about-list">
+            <li><i class="fas fa-check-circle"></i> Full-stack MERN development (MongoDB, Express, React, Node.js)</li>
+            <li><i class="fas fa-check-circle"></i> AI feature integration (Gemini API, OpenCV, TensorFlow)</li>
+            <li><i class="fas fa-check-circle"></i> DSA problem-solving — 300+ problems on LeetCode</li>
+            <li><i class="fas fa-check-circle"></i> UI/UX design with Figma — delivered 3 client projects</li>
+            <li><i class="fas fa-check-circle"></i> Deployment on Vercel, Render, and AWS basics</li>
+          </ul>
+          <a href="{{ url_for('about') }}" class="btn-outline-sm">Full Bio <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section id="skills" class="section skills-section">
+    <div class="section-inner">
+      <div class="section-label" data-aos="fade-right"><span>02 — Tech Stack</span></div>
+      <h2 class="section-title" data-aos="fade-up">Skills</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies I use to build, ship, and scale.</p>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-cat-header">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag"><i class="fas fa-wind"></i> Tailwind</span>
+            <span class="skill-tag"><i class="fas fa-palette"></i> Figma</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-header">
+            <i class="fas fa-server"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-tag"><i class="fas fa-route"></i> Express.js</span>
+            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+            <span class="skill-tag"><i class="fas fa-plug"></i> REST APIs</span>
+            <span class="skill-tag"><i class="fas fa-robot"></i> Gemini AI</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-cat-header">
+            <i class="fas fa-database"></i>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="skill-tag"><i class="fas fa-table"></i> MySQL</span>
+            <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+            <span class="skill-tag"><i class="fas fa-layer-group"></i> Mongoose</span>
+          </div>
+        </div>
+
+        <!-- Tools & Cloud -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-cat-header">
+            <i class="fas fa-cloud"></i>
+            <h3>Tools & Cloud</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fas fa-triangle"></i> Vercel</span>
+            <span class="skill-tag"><i class="fas fa-server"></i> Render</span>
+            <span class="skill-tag"><i class="fas fa-eye"></i> OpenCV</span>
+            <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section id="projects" class="section projects-section">
+    <div class="section-inner">
+      <div class="section-label" data-aos="fade-right"><span>03 — Portfolio</span></div>
+      <h2 class="section-title" data-aos="fade-up">My Work</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Real-world projects — built to solve problems, not just to look good.</p>
+
+      <!-- ★ FEATURED PROJECT: DSA Tracker ★ -->
+      <div class="featured-project" data-aos="fade-up" data-aos-delay="150">
+        <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+        <div class="featured-project-inner">
+          <div class="featured-project-info">
+            <h3 class="project-name">DSA Tracker <span class="proj-tag ai">AI-Powered</span></h3>
+            <p class="project-problem">
+              <strong>Problem:</strong> Students preparing for tech interviews had no centralized tool to track their DSA progress, get feedback on code quality, or organize problems by topic.
+            </p>
+            <p class="project-solution">
+              <strong>Solution:</strong> Built a full-stack DSA Tracker with an integrated Gemini AI code analysis engine. Users can log problems, paste their solutions, and receive instant AI feedback on time/space complexity, code correctness, and improvement tips.
+            </p>
+            <div class="project-tech">
+              <span>React.js</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Gemini API</span><span>Vercel</span><span>Render</span>
+            </div>
+            <ul class="project-features">
+              <li><i class="fas fa-check"></i> AI-powered code review using Gemini API</li>
+              <li><i class="fas fa-check"></i> Track problems by category (Arrays, Trees, DP, etc.)</li>
+              <li><i class="fas fa-check"></i> Progress dashboard with completion stats</li>
+              <li><i class="fas fa-check"></i> Deployed: Frontend on Vercel, Backend on Render</li>
+              <li><i class="fas fa-check"></i> Ideal for interview prep — used daily by 50+ peers</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/designersanket/DSA-Tracker-Application" target="_blank" class="proj-link-secondary"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://dsa-sanket.vercel.app/" target="_blank" class="proj-link-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="featured-project-img">
+            <img src="/static/img/dsa-tracker.png" alt="DSA Tracker App" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="img-placeholder"><i class="fas fa-code"></i><span>DSA Tracker</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Receipt Generator -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-header">
+            <img src="/static/img/recipt.png" alt="Receipt Generator" class="project-card-img" onerror="this.style.background='#1a1a2e'; this.src=''">
+            <div class="project-card-links">
+              <a href="https://recipt-generator-eta.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Receipt Generator</h3>
+            <p class="proj-problem"><strong>Problem:</strong> Small businesses needed a quick way to generate and print professional receipts without expensive software.</p>
+            <p class="proj-solution"><strong>Solution:</strong> Dynamic web app that generates print-ready receipts with custom fields, tax calculation, and PDF export.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>Flask</span><span>Python</span>
+            </div>
+            <div class="proj-impact"><i class="fas fa-chart-line"></i> Reduced receipt generation time by 80% for small businesses</div>
+          </div>
+        </div>
+
+        <!-- Hang Game -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-header">
+            <img src="/static/img/hang-game.png" alt="Hang Game" class="project-card-img" onerror="this.style.background='#1a1a2e'; this.src=''">
+            <div class="project-card-links">
+              <a href="https://hang-game.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Hangman Game</h3>
+            <p class="proj-problem"><strong>Problem:</strong> No fun, interactive word-game to improve vocabulary for students online.</p>
+            <p class="proj-solution"><strong>Solution:</strong> Classic Hangman game with difficulty levels, hint system, and animated feedback, deployed fully on Vercel.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>Flask</span>
+            </div>
+            <div class="proj-impact"><i class="fas fa-users"></i> 100+ plays post-launch</div>
+          </div>
+        </div>
+
+        <!-- Inventory Management -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card-header">
+            <img src="/static/img/inventry.png" alt="Inventory Management" class="project-card-img" onerror="this.style.background='#1a1a2e'; this.src=''">
+            <div class="project-card-links">
+              <a href="https://github.com/designersanket/Inventry_Management_System" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Inventory Management</h3>
+            <p class="proj-problem"><strong>Problem:</strong> Manual stock tracking led to errors and slow restocking decisions for retail shops.</p>
+            <p class="proj-solution"><strong>Solution:</strong> Python-based inventory system with CRUD operations, low-stock alerts, and sales trend reports.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Flask</span><span>MySQL</span>
+            </div>
+            <div class="proj-impact"><i class="fas fa-box"></i> Eliminated manual tracking errors for 3 local businesses</div>
+          </div>
+        </div>
+
+        <!-- Rock Paper Scissors AI -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card-header">
+            <div class="project-card-img-placeholder ai-placeholder"><i class="fas fa-hand-paper"></i></div>
+            <div class="project-card-links">
+              <a href="https://github.com/designersanket/RockPaper-Game" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>Rock Paper Scissors AI <span class="proj-tag ai">AI</span></h3>
+            <p class="proj-problem"><strong>Problem:</strong> Traditional games don't leverage computer vision for real-time gesture recognition.</p>
+            <p class="proj-solution"><strong>Solution:</strong> Real-time hand gesture detection using OpenCV + cvzone to play RPS against AI via webcam — no clicks needed.</p>
+            <div class="project-tech">
+              <span>Python</span><span>OpenCV</span><span>cvzone</span>
+            </div>
+            <div class="proj-impact"><i class="fas fa-camera"></i> 30fps real-time gesture recognition</div>
+          </div>
+        </div>
+
+        <!-- GYM Frontend -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card-header">
+            <img src="/static/img/gym.png" alt="GYM Frontend" class="project-card-img" onerror="this.style.background='#1a1a2e'; this.src=''">
+            <div class="project-card-links">
+              <a href="https://gym-pgo.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3>GYM Website Frontend</h3>
+            <p class="proj-problem"><strong>Problem:</strong> Local gym had no online presence to attract new members.</p>
+            <p class="proj-solution"><strong>Solution:</strong> Responsive, modern gym website with sections for services, trainers, pricing, and a membership CTA.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <div class="proj-impact"><i class="fas fa-mobile-alt"></i> Fully responsive across all devices</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- UI/UX Gallery -->
+      <div class="subsection-title" data-aos="fade-up"><h3>UI / UX Design Work</h3></div>
+      <div class="uiux-gallery" data-aos="fade-up" data-aos-delay="100">
+        <div class="uiux-mockup">
+          <img src="/static/img/Pams.png" alt="PAMS Mobile UI">
+          <div class="mockup-overlay">
+            <h3>PAMS Mobile UI</h3>
+            <p>Figma · Minimalist · Student App</p>
+            <a href="https://www.figma.com/proto/x6sRP8uKAWPA6xWWFW7je6/PAMS-UI-Design?page-id=0%3A1&node-id=102-216&viewport=84%2C17%2C0.16&t=3E4s4SVFsQzEotBX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=110%3A676" target="_blank">View in Figma</a>
+          </div>
+        </div>
+        <div class="uiux-mockup">
+          <img src="/static/img/ERP.png" alt="ERP Admin Panel">
+          <div class="mockup-overlay">
+            <h3>ERP Admin Panel UI</h3>
+            <p>Figma · UI Kit · Web App</p>
+            <a href="https://www.figma.com/proto/Wk2NEnL7HH7D18gqmv7yBQ/ERP-Design?node-id=53-1231&t=ZjHkiT0kdgWcs6ca-1" target="_blank">View in Figma</a>
+          </div>
+        </div>
+        <div class="uiux-mockup">
+          <img src="/static/img/Amazing-oil.png" alt="Amazing Desi Oil App">
+          <div class="mockup-overlay">
+            <h3>Amazing Desi Oil App</h3>
+            <p>Figma · Userfriendly · Mobile</p>
+            <a href="https://www.figma.com/proto/zHHzeqeswAjGnHFQyIC5UA/Amazing-Desi-oils?node-id=2-21&t=FyAeO2mTSVtxbsLs-1" target="_blank">View in Figma</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPETITIVE CODING ==================== -->
+  <section id="coding" class="section coding-section">
+    <div class="section-inner">
+      <div class="section-label" data-aos="fade-right"><span>04 — DSA & CP</span></div>
+      <h2 class="section-title" data-aos="fade-up">Competitive Coding</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Consistent problem-solving — the foundation behind clean, optimized code.</p>
+
+      <div class="coding-grid">
+        <div class="coding-stats-box" data-aos="fade-right" data-aos-delay="100">
+          <div class="platform-header leetcode">
+            <i class="fas fa-code"></i>
+            <h3>LeetCode</h3>
+          </div>
+          <div class="stat-items">
+            <div class="stat-item">
+              <span class="stat-num" id="totalSolved">200+</span>
+              <p>Problems Solved</p>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num easy">140+</span>
+              <p>Easy</p>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num medium">60+</span>
+              <p>Medium</p>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num hard">5+</span>
+              <p>Hard</p>
+            </div>
+          </div>
+          <a href="https://leetcode.com/u/Sanket_Jagadale/" target="_blank" class="btn-platform leetcode-btn">
+            <i class="fas fa-external-link-alt"></i> View LeetCode Profile
+          </a>
+        </div>
+
+        <!-- LeetCode Stats Card -->
+        <div class="coding-card-wrap" data-aos="fade-left" data-aos-delay="200">
+          <img
+            src="https://leetcard.jacoblin.cool/Sanket_Jagadale?theme=dark&font=Nunito&ext=activity"
+            alt="LeetCode Stats for Sanket_Jagadale"
+            class="leetcode-card"
+            onerror="this.style.display='none'; document.getElementById('lc-fallback').style.display='flex'">
+          <div class="lc-fallback" id="lc-fallback">
+            <i class="fas fa-chart-bar"></i>
+            <p>Head to <a href="https://leetcode.com/Sanket_Jagadale" target="_blank">LeetCode Profile</a> for full stats</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topic Strengths -->
+      <div class="topic-strengths" data-aos="fade-up" data-aos-delay="200">
+        <h3>Strong Topics</h3>
+        <div class="topics-grid">
+          <div class="topic-pill"><i class="fas fa-sitemap"></i> Arrays & Strings</div>
+          <div class="topic-pill"><i class="fas fa-project-diagram"></i> Bit Manipulation</div>
+          <div class="topic-pill"><i class="fas fa-layer-group"></i> Matrix</div>
+          <div class="topic-pill"><i class="fas fa-sort"></i> Sorting & Searching</div>
+          <div class="topic-pill"><i class="fas fa-link"></i> Linked Lists</div>
+          <div class="topic-pill"><i class="fas fa-cubes"></i> Stack & Queue</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner">
+      <div class="section-label" data-aos="fade-right"><span>05 — Get In Touch</span></div>
+      <h2 class="section-title" data-aos="fade-up">Let's <span class="gradient-text">Talk</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Have an opportunity or just want to say hi? I reply within 24 hours.</p>
+
+      <div class="contact-grid">
+        <!-- Info Panel -->
+        <div class="contact-info-panel" data-aos="fade-right" data-aos-delay="100">
+          <div class="contact-info-card">
+            <h3>Connect With Me</h3>
+            <p>Open to SDE internships, full-time roles, and freelance projects. Let's build something great together.</p>
+
+            <div class="contact-links">
+              <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin-in"></i>
                 <div>
-                  <h1 class="intro-heading">
-                    <span class="name-highlight">Sanket Jagadale</span> 
-                    a passionate developer & designer
-                  </h1>
-                    <p class="tagline">
-                      I craft intelligent solutions with code, creativity, and curiosity.
-                    </p>
-                    <div class="buttons">
-                        <a href="#"class="btn-resume">RESUME</a>
-                        <a href="#hireme" class="btn-hire-me"> CONTACT ME</a>
-                    </div>
+                  <span>LinkedIn</span>
+                  <small>Sanket Jagadale</small>
                 </div>
+              </a>
+              <a href="https://github.com/designersanket" target="_blank" class="contact-link">
+                <i class="fab fa-github"></i>
+                <div>
+                  <span>GitHub</span>
+                  <small>designersanket</small>
+                </div>
+              </a>
+              <a href="mailto:sanketjagadale04@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <span>Email</span>
+                  <small>sanketjagadale04@gmail.com</small>
+                </div>
+              </a>
+              <a href="https://leetcode.com/designersanket" target="_blank" class="contact-link">
+                <i class="fas fa-code"></i>
+                <div>
+                  <span>LeetCode</span>
+                  <small>designersanket</small>
+                </div>
+              </a>
             </div>
-        </main>
-        <spline-viewer class="robot-3d" url="https://prod.spline.design/vRX3keRAVjzy1dwn/scene.splinecode"></spline-viewer>
-    </div>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script>
-    <!-- Skill Section -->
-   <section id="skill">
-  <h1 style="text-align: center; font-size: 3rem;">Skills</h1>
-
-  
-  <div class="skill-row">
-    <div class="skill-column">
-      <div class="skill">
-        <p>HTML</p>
-        <div class="bar">
-          <div class="bar-fill html"></div>
+          </div>
         </div>
-      </div>
-      <div class="skill">
-        <p>Python</p>
-        <div class="bar">
-          <div class="bar-fill python"></div>
-        </div>
-      </div>
-    </div>
 
-    <div class="skill-column">
-      <div class="skill">
-        <p>CSS</p>
-        <div class="bar">
-          <div class="bar-fill css"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <p>JAVA</p>
-        <div class="bar">
-          <div class="bar-fill java"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Project Section -->
-   <section id="project" class="section" data-aos="fade-up">
-  <h1 style="text-align: center; font-size: 3rem;">MY Work</h1>
-
-  <div class="project-container">
-    <!-- Card 1 -->
-     <a href="https://gym-pgo.vercel.app/" target="_blank" class="card-link">
-    <div class="card">
-      <img src="/static/img/gym.png" alt="HTML Project" class="project-img" />
-      <p class="heading">GYM Frontend</p>
-      <p>Static</p>
-      <p>HTML CSS</p>
-    </div>
-     </a>
-
-    <!-- Card 2 -->
-     <a href="https://recipt-generator-eta.vercel.app/" target="_blank" class="card-link">
-        <div class="card">
-            <img src="/static/img/recipt.png" alt="CSS Project" class="project-img" />
-            <p class="heading">Recipt Gen</p>
-            <p>Dynamic</p>
-            <p>HTML CSS Flask</p>
-        </div>
-     </a>
-
-    <!-- Card 3 -->
-     <a href="https://hang-game.vercel.app/" target="_blank" class="card-link">
-        <div class="card">
-        <img src="/static/img/hang-game.png" alt="Python Project" class="project-img" />
-        <p class="heading">Hang Game</p>
-        <p>Dynamic</p>
-        <p>HTML CSS Flask</p>
-        </div>
-     </a>
-
-    <!-- Card 4 -->
-     <a href="https://github.com/designersanket/Inventry_Management_System" target="_blank" class="card-link">
-        <div class="card">
-          <img src="/static/img/inventry.png" alt="Python Project" class="project-img" />
-          <p class="heading">Inventry Man</p>
-          <p>Static</p>
-          <p>Python Flask</p>
-        </div>
-     </a>
-  </div>
-</section>
-
-
-    <!--Ai Work Section-->
-        <section id="aiwork">
-            <h1 style="text-align: center; font-size: 3rem;">AI Project</h1>
-            <div class="ai-projects-container">
-              <div class="ai-card">
-                <h2>Rock-Paper-Sessior Game</h2>
-                <p>Based on cvzone You can play with AI real time camera access</p>
-                <p><strong>Tools:</strong> Python,cvzone,open cv</p>
-                <a href="https://github.com/designersanket/RockPaper-Game">View Project</a>
+        <!-- Contact Form -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="200">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="input-group" id="grp-name">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Sanket Jagadale" autocomplete="name">
+                <span class="input-error" id="err-name"></span>
               </div>
-              <div class="ai-card">
-                <h2>Coming Soon..</h2>
-                <p>Retinopathy Detection using Deep Learning</p>
-                <p><strong>Tools:</strong>Python,Tensorflow,numpy</p>
-                <a href="#">Stay Tuned</a>
+              <div class="input-group" id="grp-email">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="recruiter@company.com" autocomplete="email">
+                <span class="input-error" id="err-email"></span>
               </div>
             </div>
-        </section>
-    <!-- Ui Gallery Section -->
-        <section id="uigallery">
-          <h1 style="text-align: center; font-size: 3rem;" col>UI Gallery</h1>
-
-              <div class="uiux-gallery">
-                <!-- Project 1 -->
-                <div class="uiux-mockup">
-                  <img src="/static/img/Pams.png" alt="PAMS UI Design" />
-                  <div class="mockup-overlay">
-                    <h3>PAMS Mobile UI</h3>
-                    <p>Figma • Minimalist • Student App</p>
-                    <a href="https://www.figma.com/proto/x6sRP8uKAWPA6xWWFW7je6/PAMS-UI-Design?page-id=0%3A1&node-id=102-216&viewport=84%2C17%2C0.16&t=3E4s4SVFsQzEotBX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=110%3A676" target="_blank">View in Figma</a>
-                  </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="uiux-mockup">
-                  <img src="/static/img/ERP.png" alt="ERP Admin Pannel" />
-                  <div class="mockup-overlay">
-                    <h3>ERP admin Pannel UI</h3>
-                    <p>Figma • UI Kit • Web App</p>
-                    <a href="https://www.figma.com/proto/Wk2NEnL7HH7D18gqmv7yBQ/ERP-Design?node-id=53-1231&t=ZjHkiT0kdgWcs6ca-1" target="_blank">View in Figma</a>
-                  </div>
-                </div>
-                    <!--Project03-->
-                    <div class="uiux-mockup">
-                      <img src="/static/img/Amazing-oil.png" alt="Amazing oil UI"/>
-                      <div class="mockup-overlay">
-                        <h3>Amazing Desi Oil Mobile App</h3>
-                        <p>Figma • Userfree • Mobile App</p>
-                        <a href="https://www.figma.com/proto/zHHzeqeswAjGnHFQyIC5UA/Amazing-Desi-oils?node-id=2-21&t=FyAeO2mTSVtxbsLs-1">View in Figma</a>
-                      </div>
-                    </div>
-                  </div>
-          </section> 
-    <footer class="footer">
-  <div class="footer-container">
-    <!-- Left Side: Contact Info -->
-    <div class="footer-left">
-      <h2 class="footer-heading">Let's <span class="gradient-text">talk</span></h2>
-      <p>Feel free to contact me 24/7</p>
-      <ul class="contact-info">
-        <li>
-          <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank">
-          <img src="/static/img/linkedin.png" alt="LinkedIn" /> Sanket Jagadale
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/designersanket" target="_blank">
-          <img src="/static/img/github.png" alt="GitHub" /> Sanket-Jagadale
-          </a>
-        </li>
-        <li>
-          <a href="sanketjagadale04@gmail.com">
-          <img src="/static/img/gmail.png" alt="Email" /> sanketjagadale04@gmail.com
-          </a>
-        </li>
-      </ul>
+            <div class="input-group" id="grp-subject">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Internship Opportunity at Acme Corp">
+              <span class="input-error" id="err-subject"></span>
+            </div>
+            <div class="input-group" id="grp-message">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Hi Sanket, we'd love to have you interview for..."></textarea>
+              <span class="input-error" id="err-message"></span>
+            </div>
+            <button type="submit" class="btn-send" id="submitBtn">
+              <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="btnLoader" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Right Side: Contact Form -->
-    <div class="form-container">
-      {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-          <div class="flash-messages">
-            {% for category, message in messages %}
-              <div class="flash {{ category }}">{{ message }}</div>
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endwith %}
-
-      <section id="hireme">
-        <form class="form" method="POST" action="/">
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input required name="email" id="email" type="text" />
-          </div>
-          <div class="form-group">
-            <label for="textarea">Type message</label>
-            <textarea required cols="50" rows="10" id="textarea" name="textarea"></textarea>
-          </div>
-          <button type="submit" class="form-submit-btn">Submit</button>
-        </form>
-      </section>
-    </div>
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle" id="toast-icon"></i>
+    <span id="toast-msg">Message sent!</span>
   </div>
-</footer>
 
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">SJ<span class="logo-dot">.</span></p>
+      <p class="footer-copy">© 2025 Sanket Jagadale — Built with passion &amp; caffeine ☕</p>
+      <div class="footer-social">
+        <a href="https://github.com/designersanket" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sanketjagadale04@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // ⚠️ Replace these with your real EmailJS credentials from https://emailjs.com
+    emailjs.init("YOUR_PUBLIC_KEY");
+  </script>
+
+  <script src="/static/script.js"></script>
 </body>
 </html>

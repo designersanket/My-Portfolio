@@ -2,40 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Sanket Jagadale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Sanket Jagadale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .about-page { max-width: 860px; margin: 100px auto; padding: 0 2rem 4rem; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.88rem; color: var(--muted); margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--cyan); }
+    .about-page-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 0.5rem; }
+    .about-subtitle { font-size: 1.05rem; color: var(--muted); margin-bottom: 3rem; }
+    .about-section-block { margin-bottom: 2.5rem; }
+    .about-section-block h3 {
+      font-size: 1.1rem; font-weight: 700; color: var(--cyan);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 1rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0,245,255,0.15);
+    }
+    .about-section-block p, .about-section-block li {
+      font-size: 0.97rem; color: var(--muted); line-height: 1.85;
+    }
+    .about-section-block ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .about-section-block ul li { display: flex; align-items: flex-start; gap: 8px; }
+    .about-section-block ul li i { color: var(--cyan); margin-top: 4px; font-size: 0.8rem; }
+    .about-cta {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; margin-top: 2rem;
+    }
+    .about-cta p { font-size: 1rem; font-weight: 600; }
+    .about-cta small { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+    .about-social { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .about-social a {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border: 1px solid var(--border);
+      border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--muted);
+      transition: var(--transition);
+    }
+    .about-social a:hover { border-color: var(--cyan); color: var(--cyan); }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h2>About Me</h2>
+  <div class="about-page">
+    <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
 
-    <p>
-      I'm <strong>Sanket Bhaskar Jagadale</strong>, a passionate <strong>B.Tech Computer Science (AI)</strong> student.
-      I enjoy solving real-world problems with code, designing engaging user interfaces, and exploring the possibilities of AI and technology.
-    </p>
+    <h1 class="about-page-title">About <span class="gradient-text">Me</span></h1>
+    <p class="about-subtitle">MERN Stack Developer · AI Enthusiast · DSA Practitioner</p>
 
-    <h3>Technical Skills</h3>
-    <ul>
-      <li><strong>Programming:</strong> Java, Python, C</li>
-      <li><strong>Development:</strong> Android Studio, Flask, Django (basic)</li>
-      <li><strong>Design:</strong> Photoshop, Canva, CapCut</li>
-      <li><strong>Tools:</strong> MySQL Workbench, VS Code</li>
-    </ul>
+    <div class="about-section-block">
+      <h3><i class="fas fa-user"></i> Who I Am</h3>
+      <p>
+        I'm <strong style="color: var(--text)">Sanket Bhaskar Jagadale</strong>, a B.Tech Computer Science (AI) student and self-driven MERN Stack developer from Maharashtra, India. I build full-stack web applications that are technically robust, visually polished, and solve real-world problems.
+      </p>
+      <br>
+      <p>
+        My passion sits at the crossroads of <strong style="color: var(--text)">web development</strong>, <strong style="color: var(--text)">AI integration</strong>, and <strong style="color: var(--text)">competitive programming</strong>. I've shipped multiple production apps, integrated the Gemini API for intelligent code analysis, and consistently practice DSA to keep my problem-solving sharp.
+      </p>
+    </div>
 
-    <h3>Highlights</h3>
-    <ul>
-      <li>Completed Intel® Unnati Industrial Training 2025</li>
-      <li>Built an AI-powered tutor system using Python and Flask</li>
-      <li>Created multiple UI designs with Figma and Adobe tools</li>
-    </ul>
+    <div class="about-section-block">
+      <h3><i class="fas fa-code"></i> Technical Skills</h3>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">Frontend:</strong> React.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS</li>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">Backend:</strong> Node.js, Express.js, Python, Flask, REST APIs</li>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">Database:</strong> MongoDB (Mongoose), MySQL, Firebase</li>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">AI/ML:</strong> Gemini API, OpenCV, cvzone, TensorFlow (basics)</li>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">Design:</strong> Figma, Adobe Photoshop, Canva</li>
+        <li><i class="fas fa-check-circle"></i> <strong style="color:var(--text)">Tools:</strong> Git, GitHub, VS Code, Vercel, Render</li>
+      </ul>
+    </div>
 
-    <h3>Outside Tech</h3>
-    <p>
-      Beyond coding, I love video editing, exploring UI design trends, playing BGMI (non-gyro), and staying updated with the latest in tech.
-    </p>
+    <div class="about-section-block">
+      <h3><i class="fas fa-trophy"></i> Highlights</h3>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Completed Intel® Unnati Industrial Training 2025</li>
+        <li><i class="fas fa-check-circle"></i> Built a DSA Tracker with Gemini AI code-analysis integration (MERN stack)</li>
+        <li><i class="fas fa-check-circle"></i> Designed 3 client UI projects using Figma (PAMS, ERP, e-commerce mobile app)</li>
+        <li><i class="fas fa-check-circle"></i> Solved 300+ problems on LeetCode across all difficulty levels</li>
+        <li><i class="fas fa-check-circle"></i> Deployed multiple apps on Vercel and Render</li>
+      </ul>
+    </div>
 
-    <div class="highlight">
-      Want to see my work? Check out the <a href="https://github.com/designersanket">Projects</a> section or <a href="mailto:sanketjagdale04@gmail.com">contact me</a> directly!
+    <div class="about-section-block">
+      <h3><i class="fas fa-bullseye"></i> What I'm Looking For</h3>
+      <p>
+        I'm actively seeking <strong style="color:var(--text)">SDE Internships</strong> and <strong style="color:var(--text)">entry-level Software Engineer</strong> roles where I can contribute to real product teams, work with modern tech stacks, and grow rapidly. I'm especially excited about roles involving full-stack development, AI integration, or developer tools.
+      </p>
+    </div>
+
+    <div class="about-cta">
+      <div>
+        <p>Let's work together</p>
+        <small>Open to internships, full-time, and freelance projects</small>
+      </div>
+      <div class="about-social">
+        <a href="https://www.linkedin.com/in/sanket-jagadale-78035233b/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://github.com/designersanket" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:sanketjagadale04@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
     </div>
   </div>
 </body>

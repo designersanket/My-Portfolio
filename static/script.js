@@ -149,15 +149,20 @@ if (form) {
     btnLoader.style.display = 'flex';
 
     const templateParams = {
+      name:       nameEl.value.trim(),
       from_name:  nameEl.value.trim(),
+      email:      emailEl.value.trim(),
       from_email: emailEl.value.trim(),
       subject:    subjectEl.value.trim(),
       message:    msgEl.value.trim(),
+      reply_to:   emailEl.value.trim(),
     };
 
+    // Debugging: Verify values before sending
+    console.log("Sending Email with Params:", templateParams);
+
     try {
-      // ⚠️ Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your real EmailJS values
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
+      await emailjs.send('service_9d3rz1q', 'template_t70ol67', templateParams);
       showToast('Message sent! I\'ll reply within 24 hours. 🎉', 'success');
       form.reset();
     } catch (err) {

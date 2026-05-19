@@ -1,3 +1,5 @@
 flask
 PyMySQL
 vercel
+scikit-learn
+numpy

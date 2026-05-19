@@ -182,3 +182,83 @@ if (form) {
     });
   });
 }
+
+// ============================================
+// DIGITAL TWIN CHATBOT
+// ============================================
+const chatFloatingBtn = document.getElementById('chatFloatingBtn');
+const chatWidget      = document.getElementById('chatWidget');
+const chatToggleBtn   = document.getElementById('chatToggleBtn');
+const chatBody        = document.getElementById('chatBody');
+const chatInput       = document.getElementById('chatInput');
+const chatSendBtn     = document.getElementById('chatSendBtn');
+
+// Open / close chat
+chatFloatingBtn.addEventListener('click', () => {
+  chatWidget.classList.add('active');
+  chatFloatingBtn.style.display = 'none';
+  chatInput.focus();
+});
+
+chatToggleBtn.addEventListener('click', () => {
+  chatWidget.classList.remove('active');
+  chatFloatingBtn.style.display = 'flex';
+});
+
+// Append a message bubble
+function appendMessage(text, role) {
+  const el = document.createElement('div');
+  el.classList.add('chat-message', role === 'user' ? 'user-message' : 'bot-message');
+  // Render \n as <br> for formatted bot responses
+  el.innerHTML = text.replace(/\n/g, '<br>');
+  chatBody.appendChild(el);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// Typing indicator
+function showTyping() {
+  const el = document.createElement('div');
+  el.classList.add('chat-message', 'bot-message');
+  el.id = 'typing-indicator';
+  el.textContent = '...';
+  chatBody.appendChild(el);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+// Send message to Flask /chat endpoint
+async function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+
+  appendMessage(text, 'user');
+  chatInput.value = '';
+  chatSendBtn.disabled = true;
+  showTyping();
+
+  try {
+    const res = await fetch('/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text }),
+    });
+    const data = await res.json();
+    removeTyping();
+    appendMessage(data.response, 'bot');
+  } catch (err) {
+    removeTyping();
+    appendMessage("Hmm, something went wrong. Try again!", 'bot');
+  } finally {
+    chatSendBtn.disabled = false;
+    chatInput.focus();
+  }
+}
+
+chatSendBtn.addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') sendMessage();
+});

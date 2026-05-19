@@ -558,6 +558,33 @@
     })();
   </script>
 
+  <!-- ==================== DIGITAL TWIN CHATBOT ==================== -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header" id="chatHeader">
+      <div class="chat-header-info">
+        <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+        <div class="chat-title">
+          <h4>Sanket's AI Twin</h4>
+          <span class="chat-status">Online</span>
+        </div>
+      </div>
+      <button class="chat-toggle-btn" id="chatToggleBtn"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot-message">
+        Hi there! I am Sanket's digital twin. Ask me about his skills, projects, or goals!
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Ask me anything..." autocomplete="off">
+      <button id="chatSendBtn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <button class="chat-floating-btn" id="chatFloatingBtn">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
   <script src="/static/script.js"></script>
 </body>
 </html>
